@@ -1,5 +1,11 @@
-#                     github.com/tagirov/cfg
-#------------------------------------------------------------------
+##     / \__
+##    (    @\__ 
+##    /         O
+##   /   (_____/
+##  /_____/   U
+##                      github.com/tagirov/HuskyOS
+##################################################
+
 
     autoload -U compinit && compinit
     zstyle ':completion:*' menu select

@@ -1,5 +1,13 @@
-//                  github.com/tagirov/cfg
-//-------------------------------------------------------------
+//
+//     / \__
+//    (    @\__ 
+//    /         O
+//   /   (_____/
+//  /_____/   U
+//                       github.com/tagirov/HuskyOS
+///////////////////////////////////////////////////
+
+
 
 // Based on slate theme (github.com/Algram)
 
@@ -20,7 +28,7 @@ inputbar {
 
 prompt {
   padding: 16px;
-  border: 0 1px 0 0;
+  border: 0 0 0 0;
 }
 
 textbox {
@@ -38,5 +46,5 @@ element {
 }
 
 element.selected {
-  background-color: #2e343f;
+  background-color: #454c57;
 }

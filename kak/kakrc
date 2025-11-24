@@ -1,13 +1,46 @@
-#                   github.com/tagirov/cfg
-#--------------------------------------------------------------
+##     / \__
+##    (    @\__ 
+##    /         O
+##   /   (_____/
+##  /_____/   U
+##                      github.com/tagirov/HuskyOS
+##################################################
 
-source "%val{config}/plugins/plug.kak/rc/plug.kak"
+
+# source "%val{config}/plugins/plug.kak/rc/plug.kak"
+
+#------------------------- plugins ----------------------------
+
+
+# plug "tagirov/kakoune-ladies-night-theme"
+colorscheme ladies-night
+
+# colorscheme black-on-white
+
+# plug "andreyorst/plug.kak" noload
+# plug 'delapouite/kakoune-palette'
+# plug "occivink/kakoune-vertical-selection"
+# plug "occivink/kakoune-sudo-write" 
+# plug "andreyorst/fzf.kak"
+# plug "alexherbo2/prelude.kak"
+# plug "alexherbo2/auto-pairs.kak"
+# plug "alexherbo2/palette.kak"
+# plug "danr/kakoune-easymotion"
+# plug "alexherbo2/surround.kak"
+# plug "alexherbo2/manual-indent.kak"
+
+# colorscheme gruvbox-dark
+# colorscheme gruvbox-light
+
+# enable-auto-pairs
+               
+# require-module palette
+#                palette-enable
+
+
+map global normal X T<ret>Lx
 
 #----------------------- appearance ---------------------------
-
-colorscheme ladies-night
-# colorscheme gruvbox
-# colorscheme snow-light
 
 #add-highlighter global/ line '%val{cursor_line}'              \
 # "default,rgba:383c4a83"
@@ -17,24 +50,6 @@ set-option global ui_options terminal_assistant=off
 add-highlighter global/ number-lines -hlcursor -separator '|  '
 add-highlighter global/ wrap
 add-highlighter global/ show-matching
-
-#------------------------- plugins ----------------------------
-
-# plug "occivink/kakoune-vertical-selection"
-# plug "occivink/kakoune-sudo-write" 
-# plug "andreyorst/fzf.kak"
-# plug "alexherbo2/prelude.kak"
-# plug "alexherbo2/auto-pairs.kak"
-plug "alexherbo2/palette.kak"
-# plug "danr/kakoune-easymotion"
-# plug "alexherbo2/surround.kak"
-# plug "alexherbo2/manual-indent.kak"
-
-# require-module auto-pairs
-               # auto-pairs-enable
-               
-require-module palette
-               palette-enable
 
 #-------------------------- user ------------------------------
 
@@ -98,34 +113,39 @@ map global normal O L
 
 map global goto n h
 map global goto o l
+map global goto e j
+map global goto i k
 
 map global goto N H
 map global goto O L
+map global goto E J
+map global goto I K
 
 map global normal <a-l> <a-i>
 map global normal <a-k> <a-n>
 
 #------------------------ turbo nav ---------------------------
 
-map global insert <c-left> '<esc>b;i'
-map global insert <c-right> '<esc>w;i'
-map global insert <c-up> '<esc>5k;'
-map global insert <c-down> '<esc>5j;'
 
-map global normal <c-left> '<esc>b;'
-map global normal <c-right> '<esc>w;'
-map global normal <c-up> '<esc>5k;'
-map global normal <c-down> '<esc>5j;'
+map global insert <c-n> '<esc>b;i'
+map global insert <c-o> '<esc>w;i'
+map global insert <c-e> '<esc>5j;'
+map global insert <tab> '<esc>5k;'
 
-map global insert <c-s-left> '<esc>B;i'
-map global insert <c-s-right> '<esc>W;i'
-map global insert <c-s-up> '<esc>5K;'
-map global insert <c-s-down> '<esc>5J;'
+map global normal <c-n> '<esc>b;'
+map global normal <c-o> '<esc>w;'
+map global normal <c-e> '<esc>5j;'
+map global normal <tab> '<esc>5k;'
 
-map global normal <c-s-left> '<esc>B'
-map global normal <c-s-right> '<esc>W'
-map global normal <c-s-up> '<esc>5K'
-map global normal <c-s-down> '<esc>5J'
+map global insert <c-s-n> '<esc>B;i'
+map global insert <c-s-o> '<esc>W;i'
+map global insert <c-s-e> '<esc>5J;'
+# map global insert <tab-s> '<esc>5K;'
+
+map global normal <c-s-n> '<esc>B'
+map global normal <c-s-o> '<esc>W'
+map global normal <c-s-e> '<esc>5J'
+# map global normal <tab-s> '<esc>5K'
 
 #------------------------- remap  -----------------------------
 
@@ -134,7 +154,7 @@ map global normal <c-s-down> '<esc>5J'
 #-------------------------- misc ------------------------------
 
 ### Live reload
-# set-option global autoreload yes
+set-option global autoreload yes
 
 ### Live reload method
 set-option global writemethod replace
@@ -143,7 +163,7 @@ map global normal '#' :comment-line<ret>
 #map global normal '<c-w>' :q!<ret>
 #map global insert '<c-w>' <esc>:q!<ret>
 
-set global tabstop 2
+set global tabstop 4
 set global disabled_hooks .*-indent # Disable auto-indent
 
 #--------------------------------------------------------------

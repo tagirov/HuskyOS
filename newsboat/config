@@ -1,14 +1,21 @@
-#                   github.com/tagirov/cfg
-#--------------------------------------------------------------
+##     / \__
+##    (    @\__ 
+##    /         O
+##   /   (_____/
+##  /_____/   U
+##                      github.com/tagirov/HuskyOS
+##################################################
 
 auto-reload yes
-browser firefox
+browser zen-browser
 confirm-exit no
 cleanup-on-quit yes
 player mpv
 refresh-on-startup yes
 reload-time 20
-reload-threads 2
+reload-threads 40
+
+bookmark-cmd "~/.newsboat/bookmark.sh"
 
 color info default default reverse
 color listnormal_unread green default
