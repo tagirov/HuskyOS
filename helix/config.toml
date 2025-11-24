@@ -60,7 +60,7 @@ C-b = "jump_backward"
 C-k = "jump_forward"
 C-m = "save_selection"
 
-# Turbo nav
+## Turbo navigation
 
 C-n = [
   "move_char_left",
