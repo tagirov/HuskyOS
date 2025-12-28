@@ -2,8 +2,7 @@
 ##    (    @\__ 
 ##    /         O
 ##   /   (_____/
-##  /_____/   U
-##                      github.com/tagirov/HuskyOS
+##  /_____/   U         github.com/tagirov/HuskyOS
 ##################################################
 
 theme = "synthwave"
@@ -25,13 +24,16 @@ lsp.enable = false
 [keys.normal]
 g = { n = "goto_line_start", o = "goto_line_end" }
 
-# "C-," = ""
+# "C-," = ":!lua ~/.config/helix/toggle_comment_html.lua<CR>"
 
 "щ" = "yank"
 "ы" = "paste_after"
 "h" = ":buffer-next"
 "j" = ":buffer-previous"
-"k" = "append_mode"
+# "k" = "append_mode"
+
+"," = "open_below"
+"<" = "open_above"
 
 "C-s" = ":w"
 "C-q" = ":q"
@@ -46,15 +48,15 @@ n = "move_char_left"
 e = "move_line_down"
 i = "move_line_up"
 o = "move_char_right"
+l = "insert_mode"
+L = "insert_at_line_start"
+A = "insert_at_line_end"
 
 "}" = "move_next_word_end"
 "{" = "move_next_long_word_end"
 
 ")" = "search_next"
 "(" = "search_prev"
-
-l = "insert_mode"
-f = "open_below"
 
 C-b = "jump_backward"
 C-k = "jump_forward"
